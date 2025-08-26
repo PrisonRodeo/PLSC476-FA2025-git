@@ -1,2 +1,3 @@
-# PLSC476-FA2025-git
-Github repo for PLSC 476 - Fall 2025
+# PLSC 476: Empirical Legal Studies
+
+This is the github repository for the Fall 2025 version of PLSC 476: Empirical Legal Studies. This site contains (or will contain) all relevant course materials for the class.
