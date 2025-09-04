@@ -1,0 +1,699 @@
+---
+title: 'PLSC476: Empirical Legal Studies'
+author: "Christopher Zorn"
+date: "September 4, 2025"
+output:
+  beamer_presentation:
+    colortheme: dove
+    includes:
+      in_header: LaTeX-header.tex
+    theme: Pittsburgh
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+############################################
+# Housekeeping + setup:
+#
+# Don't forget to set a working directory,
+# using setwd():
+#
+# setwd("~/Dropbox (Personal)/PLSC 476")
+#
+# Options:
+
+options(scipen = 6) # bias against scientific notation
+options(digits = 3) # show fewer decimal places
+options(repos = c(CRAN = "https://cran.rstudio.com"))
+
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Packages...
+#
+# This code takes a list of packages ("P") and (a) checks 
+# for whether the package is installed or not, (b) installs 
+# it if it is not, and then (c) loads each of them. BUT...
+#
+# Before you can do that, you need to run this little bit
+# of code, to get the "urbanmapr" package from their
+# github repo:
+
+install.packages("devtools")
+devtools::install_github("UrbanInstitute/urbnmapr")
+
+# Next, the package code:
+
+P<-c("readxl","visdat","sf","psych","dplyr","ggplot2",
+     "tidyr","stringr","lubridate","maps","usmap",
+     "urbnmapr","car","lattice","curl")
+
+for (i in 1:length(P)) {
+  ifelse(!require(P[i],character.only=TRUE),install.packages(P[i]),
+         print(":)"))
+  library(P[i],character.only=TRUE)
+}
+rm(P)
+rm(i)
+
+# Run lines 40-50 ten or twelve times until you get all smileys. :)
+#
+
+# Also be sure to include the file "LaTeX-header.tex"
+# from the github repo in your local directory...
+
+############################################
+```
+
+---
+
+**R and RMarkdown**
+
+- [RMarkdown](https://rmarkdown.rstudio.com/) is "an authoring framework for data science" that facilitates literate programming and reproduceable research
+ - Purpose: To allow for the creation of *reproduceable*, *dynamic* documents, presentations, and web pages.
+ - Similar to Markdown (and other lightweight, literate markup languages)
+ - Combines text, `R code`, and R output
+ - Output formats: PDF, HTML, Word, Shiny (for interactive web apps), others
+ - These slides were created using RMarkdown; the code for doing so is available on the course [github repository](https://github.com/PrisonRodeo/PLSC476-FA2025-git/tree/master/Code)
+ 
+\bigskip
+
+---
+
+\huge
+
+**Why Plot?**
+
+\bigskip
+
+- Know your data
+\bigskip
+- Catch mistakes
+\bigskip
+- Learn something...
+
+---
+
+**Running Example: COVID-19 in PA**
+
+ - $N = 67$ counties
+ - Current as of July 22, 2025
+ - Source: [PA Department of Health](https://data.pa.gov/Health/COVID-19-Aggregate-Cases-Current-Daily-County-Heal/j72v-r42c)
+
+\bigskip
+
+*Variables*:
+
+\btwocol 
+
+  - County Name
+  - Latitude/Longitude
+  - FIPS code
+  - Date
+  - New Cases
+  - 7-Day Average of New Cases
+  - Total/Cumulative Cases
+  - County Population
+  - New Case Rate (per 100K population)
+  - 7-Day Average of New Case Rate
+  - Cumulative Case Rate (per 100K population)
+  - New Deaths
+  - Total/Cumulative Deaths
+  - Cumulative Death Rate (per 100K population)
+
+\etwocol
+
+---
+
+\tiny
+```{r fig.width=6.5,fig.asp=0.7} 
+
+# Pull the COVID-19 data directly from the PA Dept. of Health
+# website:
+
+cases <- read.csv("https://data.pa.gov/api/views/j72v-r42c/rows.csv?accessType=DOWNLOAD",
+                  stringsAsFactors=FALSE) # read the data
+
+# Next, grab the COVID deaths data:
+
+deaths <- read.csv("https://data.pa.gov/api/views/fbgu-sqgp/rows.csv?accessType=DOWNLOAD",
+                   stringsAsFactors=FALSE) # read the data
+
+# Clean a bit:
+
+deaths$Date<-deaths$Date.of.Death
+deaths<-data.frame(County.FIPS.Code=deaths$County.FIPS.Code,
+                   Date=deaths$Date,
+                   New.Deaths=deaths$New.Deaths,
+                   Total.Deaths=deaths$Total.Deaths,
+                   Total.Death.Rate=deaths$Total.Death.Rate)
+
+# Merge the two:
+
+df<-merge(cases,deaths,by=c("County.FIPS.Code","Date"),
+          all=TRUE)
+
+# Subset to July 22, 2021 data only (change the date
+# if you want to update things):
+
+COVID<-df[df$Date=="07/22/2021",]
+
+# Also subset the data for Centre County alone...
+
+Centre <- df[df$Jurisdiction=="Centre",]
+
+# ...and sort by date:
+
+Centre$Date <- mdy(Centre$Date)
+Centre <- Centre[order(Centre$Date),]
+
+# Some of the data contains state-level (rather
+# than county-level) numbers. We should remove this:
+
+COVID<-COVID[COVID$Jurisdiction!="Pennsylvania",]
+
+# Rename some things to make the data more user-
+# friendly:
+
+names(COVID)[names(COVID)=="Jurisdiction"] <- "County"
+names(COVID)[names(COVID)=="X7.day.Average.New.Cases"] <- "New.Cases.7dayAvg"
+names(COVID)[names(COVID)=="Cumulative.cases"] <- "Cumulative.Cases"
+names(COVID)[names(COVID)=="Population..2019."] <- "Population"
+names(COVID)[names(COVID)=="X7.Day.Average.New.Case.Rate"] <- "New.Case.Rate.7DayAvg"
+names(COVID)[names(COVID)=="County.FIPS.Code"] <- "FIPS"
+
+# Now view the data:
+
+knitr::kable(COVID[1:12,1:6],caption="PA COVID-19 Data, 07/22/2021")
+```
+
+---
+
+**Data Summary**
+
+\tiny
+```{r include=TRUE, comment=NA} 
+# Summary table of COVID-19 data:
+
+summary(COVID)
+```
+
+---
+
+\Large
+
+**Univariate Graphics**
+
+- Dotcharts / Barcharts
+- Histograms
+- Density Plots
+- Boxplots
+- Q-Q Plots
+- Others...
+
+---
+
+**A Dotchart**
+
+```{r fig.cap="New COVID-19 Cases by County",fig.width=5,fig.asp=0.7} 
+
+# Sort alphabetically:
+
+COVID<-COVID[order(COVID$County,decreasing=TRUE),]
+
+# Plot:
+
+par(mar=c(4,4,2,2)) # fix figure margins a bit
+with(COVID, dotchart(New.Cases,pch=19,labels=County,
+             cex=0.35,xlab="Number of New Cases"))
+```
+
+---
+
+**A Sorted Dotchart**
+
+```{r fig.cap="New COVID-19 Cases by County",fig.width=5,fig.asp=0.7} 
+
+# Sort by number of new cases:
+
+COVID<-COVID[order(COVID$New.Cases),]
+
+# Plot:
+
+par(mar=c(4,4,2,2)) # fix figure margins a bit
+with(COVID, dotchart(New.Cases,pch=19,labels=County,
+             cex=0.30,xlab="Number of New Cases"))
+abline(v=c(20,40,60,80,100),lty=2,lwd=1) # add ref. lines
+abline(v=mean(COVID$New.Cases,na.rm=TRUE),lty=1,col="blue")
+abline(v=median(COVID$New.Cases,na.rm=TRUE),lty=1,col="orange")
+legend("bottomright",bty="n",lty=1,col=c("blue","orange"),
+       legend=c("Mean","Median"))
+```
+
+---
+
+**A (Sorted) Barchart**
+
+```{r fig.cap="New COVID-19 Cases by County",fig.width=6,fig.asp=0.7} 
+
+par(mar=c(4,4,2,2))
+with(COVID, barplot(New.Cases,horiz=TRUE,names.arg=County,
+             las=1,cex.names=0.3,cex.axis=0.4,cex.lab=0.4,
+             xlab="Number of New Cases"))
+```
+
+---
+
+**The Histogram: Cumulative Case Percentages**
+
+\tiny
+
+```{r fig.cap="Cumulative Cases, as a Percentage of Population",fig.width=4,fig.asp=0.7,comment=NA} 
+
+# Let's switch the focus to "cumulative cases, as 
+# a percent of population," because that's
+# more intuitive. First, create that variable...
+
+COVID$Case.Percent <- COVID$Cumulative.Case.Rate / 1000
+
+# ...and sort the data by that:
+
+COVID <- COVID[order(COVID$Case.Percent),]
+
+# Summarize that variable:
+
+describe(COVID$Case.Percent)
+
+# ...and draw a histogram:
+
+par(mar=c(4,4,2,2))
+hist(COVID$Case.Percent,col="grey",main=" ",
+     xlab="COVID-19 Infection Percent",
+     breaks=6,xlim=c(0,20),cex.axis=0.7,
+     cex.lab=0.7)
+# draw a reference/mean line
+abline(v=mean(COVID$Case.Percent),lwd=2,lty=2) 
+
+```
+
+---
+
+**"Kernel Density" Plot**
+
+```{r fig.cap="Cumulative Cases, as a Percentage of Population",fig.width=4,fig.asp=0.7,comment=NA} 
+
+par(mar=c(4,4,2,2))
+with(COVID, plot(density(Case.Percent),t="l",lwd=2,main="",
+             xlab="COVID-19 Infection Percent",
+             xlim=c(0,20),cex.axis=0.7,cex.lab=0.7))
+
+```
+
+---
+
+**Density + Histogram**
+
+```{r fig.cap="Cumulative Cases, as a Percentage of Population",fig.width=4,fig.asp=0.7,comment=NA} 
+
+par(mar=c(4,4,2,2))
+hist(COVID$Case.Percent,col="grey",main=" ",
+     xlab="COVID-19 Infection Percent",
+     breaks=6,xlim=c(0,20),ylim=c(0,0.40),
+     cex.axis=0.7,cex.lab=0.7,freq=FALSE)
+with(COVID, lines(density(Case.Percent),t="l",lwd=2))
+
+```
+
+---
+
+**A Boxplot**
+
+```{r fig.cap="Cumulative Cases, as a Percentage of Population",fig.width=4,fig.asp=0.7,comment=NA} 
+
+par(mar=c(2,4,2,2))
+with(COVID, boxplot(Case.Percent,main="",
+                    ylab="COVID-19 Infection Percent",
+                    ylim=c(0,20),cex.lab=0.7))
+                    
+```                    
+
+---
+
+**Multiple Boxplots in One Figure**
+
+```{r fig.cap="Two Boxplots",fig.width=4,fig.asp=0.7,comment=NA} 
+
+# Create "Population in Hundreds of Thousands" variable:
+
+COVID$Pop100K <- COVID$Population / 100000
+
+par(mar=c(2,4,2,2))
+boxplot(COVID[,c("Case.Percent","Pop100K")],main="",
+        ylab="Values",names=c("Cum. Case Pct.","Pop. in 100Ks"),
+        cex.lab=0.7,cex.axis=0.7)
+        
+```
+
+---
+
+\Large
+
+**Quantile-Quantile (Q-Q) Plots**
+
+- Plots two sets of quantiles against each other...
+- Can be used to compare two variables' distributions to each other
+- Can also compare the *empirical* distribution of a variable to a *theoretical* distribution
+- If the two are the same, the quantiles will lie on a straight line
+
+---
+
+**One Density...**
+
+```{r fig.cap="New Cases per 100K Population", fig.width=4,fig.asp=0.7,comment=NA} 
+
+par(mar=c(4,4,2,2))
+with(COVID, plot(density(New.Case.Rate),t="l",lwd=2,main="",
+             xlab="New COVID Cases per 100K",
+             cex.axis=0.7,cex.lab=0.7))
+
+```
+
+---
+
+**One-Variable Normal Q-Q Plot**
+
+```{r fig.cap="New Cases per 100K Population", fig.width=4,fig.asp=0.9,comment=NA} 
+
+with(COVID,qqnorm(New.Case.Rate,main="",
+                  pch=19,ylab="New Case Rate",
+                  cex.lab=0.7,cex.axis=0.7))
+with(COVID, qqline(New.Case.Rate,lwd=2))
+
+```
+
+---
+
+**Two Densities...**
+
+```{r fig.cap="New and Cumulative Cases per 100K Population",fig.width=4,fig.asp=0.7,comment=NA} 
+
+par(mfrow=c(1,2)) # put two figures side-by-side
+par(mar=c(4,4,2,2))
+with(COVID, plot(density(New.Case.Rate),t="l",lwd=2,main="",
+             xlab="New COVID Cases per 100K",
+             cex.axis=0.7,cex.lab=0.7))
+with(COVID, plot(density(Cumulative.Case.Rate),t="l",lwd=2,main="",
+             xlab="Cumulative COVID Cases per 100K",
+             cex.axis=0.7,cex.lab=0.7))
+
+```
+
+---
+
+**Two-Variable Q-Q Plot**
+
+```{r fig.cap="New and Cumulative Cases per 100K Population",fig.width=4,fig.asp=0.9,comment=NA} 
+
+with(COVID,qqplot(New.Case.Rate,Cumulative.Case.Rate,
+                  pch=19,xlab="New Case Rate",
+                  ylab="Cumulative Case Rate",
+                  cex.lab=0.7,cex.axis=0.7))
+
+```
+
+---
+
+\LARGE
+
+**Other Univariate Plots**
+
+- Pie charts ([please don't...](http://www.storytellingwithdata.com/blog/2011/07/death-to-pie-charts))
+- "Donut" plots (same)
+- "Stem-and-leaf" plots (very old-school)
+- [Stripplots](https://r-coder.com/stripchart-r/)
+- *Time-Series Plots*...
+
+---
+
+**A Time Series Plot**
+
+```{r fig.cap="Daily COVID Cases in Centre County, 3/1/2020-6/15/2023",fig.width=4.5, fig.asp=0.9,comment=NA} 
+
+# Use the Centre-county-only data 
+
+with(Centre, plot(Date,New.Cases,t="l",
+                cex.lab=0.7,cex.axis=0.7))
+
+```
+
+---
+
+**Add a "Smoother"**
+
+```{r fig.cap="Daily COVID Cases in Centre County, 3/1/2020-6/15/2023",fig.width=4.5, fig.asp=0.9,comment=NA} 
+
+# Use the Centre-county-only data 
+
+with(Centre, plot(Date,New.Cases,t="l",
+                cex.lab=0.7,cex.axis=0.7))
+with(Centre, lines(lowess(Date,New.Cases,f=0.01,
+                          delta=20),
+                   lwd=2,col="red"))
+
+```
+
+---
+
+**Another Cool Viz: Maps**
+
+```{r fig.cap="Total Cases (Percent of the Population)",fig.width=4.5, fig.asp=0.9,comment=NA,warning=FALSE,message=FALSE}
+
+# Let's make a map!
+
+# Get some mapping data:
+
+allmap <- get_urbn_map(map = "counties", sf = TRUE) # map data
+PAmap <- allmap[allmap$state_name == "Pennsylvania",] # PA
+PAmap$FIPS<-as.numeric(PAmap$county_fips)
+
+# Merge with COVID data:
+
+COVID2<-merge(COVID,PAmap,by=c("FIPS"))
+
+# Make variables & legend breaks:
+
+COVID2$CPct<-round(COVID2$Case.Percent,1)
+my_breaks = c(6,9,12,15,18)
+
+COVID2 %>%
+  ggplot() + theme_void() +
+  geom_sf(mapping = aes(fill = Case.Percent,geometry=geometry),
+          color = gray(0), size = 0.05) +
+  scale_fill_gradientn(name="Cases (Percent)",trans="log",
+                       breaks=my_breaks, labels=my_breaks,
+                       colours=c("darkgreen","yellow","red")) +
+  labs(title="",
+       fill="Cases per 100 Population",
+       subtitle="") +
+  geom_sf_text(aes(label=CPct, geometry=geometry),
+               fun.geometry=st_centroid,cex=1.5,col="black")
+
+
+```
+
+---
+
+**Bivariate Plots: The Scatterplot**
+
+```{r fig.cap="Case Rates vs. Death Rates",fig.width=4, fig.asp=0.9,comment=NA} 
+
+with(COVID,plot(Cumulative.Case.Rate,Total.Death.Rate,
+                cex.lab=0.7,cex.axis=0.7))
+
+```
+
+---
+
+**A Better Scatterplot**
+
+```{r fig.cap="Case Rates vs. Death Rates",fig.width=4, fig.asp=0.8,comment=NA} 
+
+par(mar=c(4,4,2,2))
+with(COVID,plot(Cumulative.Case.Rate,Total.Death.Rate,pch=20,
+                cex.lab=0.8,cex.axis=0.8,
+                xlab="Cumulative Cases per 100K",
+                ylab="Cumulative Deaths per 100K"))
+abline(h=mean(COVID$Total.Death.Rate),lty=2)
+abline(v=mean(COVID$Cumulative.Case.Rate),lty=2)
+
+```
+
+---
+
+**Rescaling Axes (Log Scales)**
+
+```{r fig.cap="Case Rates vs. Death Rates",fig.width=4, fig.asp=0.8,comment=NA} 
+
+par(mar=c(4,4,2,2))
+with(COVID,plot(Cumulative.Case.Rate,Total.Death.Rate,pch=20,
+                cex.lab=0.8,cex.axis=0.8,log="xy",
+                xlab="Cumulative Cases per 100K",
+                ylab="Cumulative Deaths per 100K"))
+abline(h=mean(COVID$Total.Death.Rate),lty=2)
+abline(v=mean(COVID$Cumulative.Case.Rate),lty=2)
+
+```
+
+---
+
+**Adding Lines**
+
+```{r fig.cap="New Cases vs. Population",fig.width=4, fig.asp=0.8,comment=NA} 
+
+par(mar=c(4,4,2,2))
+scatterplot(New.Cases+0.1~Population,data=COVID,
+            log="xy",pch=19,boxplots=FALSE,
+            col="black",cex=0.8,grid=FALSE,
+            cex.lab=0.8,cex.axis=0.8,
+                ylab="log(New Cases, 1/27/2021)",
+                xlab="log(Population)")
+
+```
+
+---
+
+**How Not To Draw A Scatterplot**
+
+```{r fig.cap="Urban/Rural vs. Cumulative Case Percent",fig.width=4, fig.asp=0.8,comment=NA} 
+
+# Add urban/rural county indicators from the U.S. 
+# Census to the PA COVID data...
+#
+# Grab the data:
+
+url <- "https://ers.usda.gov/sites/default/files/_laserfiche/DataFiles/53251/ruralurbancodes2013.xls?v=66529"
+destfile <- "UR.xls"
+curl::curl_download(url, destfile)
+UR <- read_excel(destfile)
+rm(url,destfile) # clean up
+
+# Pull PA Counties only:
+
+UR<-UR[UR$State=="PA",]
+
+# Make urban/rural indicator data:
+
+UR2 <- data.frame(FIPS = as.numeric(UR$FIPS),
+                  Urban = ifelse(UR$RUCC_2013<4,1,0))
+
+# Now merge:
+
+COVID <- merge(COVID,UR2,by=c("FIPS"))
+rm(UR,UR2)
+
+# Make a terrible scatterplot:
+
+par(mar=c(4,4,2,2))
+with(COVID,plot(Urban,Case.Percent,pch=20,xaxt="n",
+                cex.lab=0.8,cex.axis=0.8,xlim=c(-0.5,1.5),
+                ylab="Cumulative Case Percent",
+                xlab="Urban/Rural"),xlim=c(0,20))
+axis(1,at=c(0,1),labels=c("Rural","Urban"),cex=0.8)
+
+```
+
+---
+
+**Better...**
+
+```{r fig.cap="Cumulative Cases: Percent of the Population", fig.width=4,fig.asp=0.7,comment=NA} 
+
+par(mar=c(4,4,2,2))
+with(COVID[COVID$Urban==1,], plot(density(Case.Percent), 
+             t="l",lwd=2,main="",xlim=c(0,18),
+             xlab="Cumulative Case Percent",
+             cex.axis=0.7,cex.lab=0.7,
+             col="red"))
+with(COVID[COVID$Urban==0,], lines(density(Case.Percent), 
+             lwd=2,lty=2,col="darkgreen"))
+legend("topright",legend=c("Urban","Rural"),
+       col=c("red","darkgreen"),lty=c(1,2),
+       lwd=2,bty="n")
+
+```
+
+---
+
+**Or:**
+
+```{r fig.cap="Cumulative Cases: Percent of the Population", fig.width=4,fig.asp=0.7,comment=NA} 
+
+COVID$Urb <- ifelse(COVID$Urban==1,"Urban","Rural")
+
+par(mar=c(4,4,2,2))
+with(COVID, boxplot(Case.Percent~Urb,ylim=c(0,20),
+             ylab="Cumulative Case Percentage",
+             xlab="County Type",
+             cex.axis=0.7,cex.lab=0.7))
+
+```
+
+---
+
+**Multivariate Plots: Scatterplot Matrix**
+
+```{r fig.cap="COVID in Pennsylvania (1/27/2021)", fig.width=4.5,fig.asp=0.7,comment=NA} 
+
+# Draw a scatterplot matrix of four variables:
+
+par(mar=c(4,4,2,2))
+with(COVID,scatterplotMatrix(~New.Case.Rate+
+              New.Case.Rate.7DayAvg+Case.Percent+Total.Death.Rate,
+              pch=20,cex=0.5,cex.labels=0.5,col="black",
+              var.labels=c("New Case Rate","Case Rate (7-Day Avg.)","Total Case Pct","Death Rate")))
+
+```
+
+---
+
+**Conditioned Scatterplots**
+
+```{r fig.cap="Case and Death Rates, by Urban/Rural", fig.width=4.5,fig.asp=0.7,comment=NA} 
+par(mfrow=c(1,2)) # <- Create a combined plot: 1 row, 2 columns
+par(mar=c(4,4,4,2))
+with(COVID[COVID$Urb=="Urban",],
+     plot(Cumulative.Case.Rate,Total.Death.Rate,cex=0.7,
+          pch=19,main=" ",cex.axis=0.7,cex.lab=0.7,
+     xlab="Cumulative Case Rate: Urban",ylab="Cumulative Death Rate",
+     xlim=c(2000,18000),ylim=c(0,350)))
+with(COVID[COVID$Urb=="Rural",],
+     plot(Cumulative.Case.Rate,Total.Death.Rate,cex=0.7,
+          pch=19,main=" ",cex.axis=0.7,cex.lab=0.7,
+     xlab="Cumulative Case Rate: Rural",ylab="Cumulative Death Rate",
+     xlim=c(2000,18000),ylim=c(0,350)))
+
+```
+
+---
+
+\LARGE
+
+**Other Cool Visualizations**
+
+- Contour / Wireframe Plots ("3D")
+- Radar plots
+- Parallel coordinates plots
+- Dynamic / interactive graphics
+- Many more...
+
+
+
+---
+
+\LARGE
+
+**Good Visualization Practices**
+
+- Go from simple to complex
+- Optimize {readability, information density}
+- Each plot should "stand on its own"
+- Consider colorblindness (see, e.g., [here](https://www.nceas.ucsb.edu/sites/default/files/2022-06/Colorblind%20Safe%20Color%20Schemes.pdf))
