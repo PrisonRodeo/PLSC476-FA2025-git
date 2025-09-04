@@ -1,5 +1,5 @@
 ---
-title: 'PLSC476: Empirical Legal Studies'
+title: 'PLSC 476: Empirical Legal Studies'
 author: "Christopher Zorn"
 date: "September 4, 2025"
 output:
