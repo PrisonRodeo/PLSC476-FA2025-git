@@ -1,0 +1,212 @@
+schoolid,schoolname,CalendarYear,MainOPEID,SchoolCity,SchoolState,SchoolZipCode,TermType,SchoolType,SchoolStatus
+00100300,Faulkner University,2024,00100300,Montgomery,AL,36109,SEM,PRI,Active
+00103600,Samford University,2024,00103600,Birmingham,AL,35229,SEM,PRI,Active
+00105100,University of Alabama,2024,00105100,Tuscaloosa,AL,35487,SEM,PUB,Active
+00108100,Arizona State University,2024,00108100,Phoenix,AZ,85004-4467,SEM,PUB,Active
+00108300,University of Arizona,2024,00108300,Tucson,AZ,85721,SEM,PUB,Active
+00110101,University of Arkansas-Little Rock,2024,00110100,Little Rock,AR,72202,SEM,PUB,Active
+00110800,University of Arkansas-Fayetteville,2024,00110800,Fayetteville,AR,72701,SEM,PUB,Active
+00116453,Chapman University,2024,00116400,Orange,CA,92866,SEM,PRI,Active
+00120529,Golden Gate University,2024,00120500,San Francisco,CA,94105,SEM,PRI,InActive
+00121601,University of La Verne,2024,00121600,Ontario,CA,91764,SEM,PRI,InActive
+00129500,Southwestern Law School,2024,00129500,Los Angeles,CA,90010,SEM,PRI,Active
+00130503,Stanford University,2024,00130500,Stanford,CA,94305,QTR,PRI,Active
+00131273,University of California-Berkeley,2024,00131200,Berkeley,CA,94720,SEM,PUB,Active
+00131373,University of California-Davis,2024,00131300,Davis,CA,95616,SEM,PUB,Active
+00131400,University of California-Irvine,2024,00131400,Irvine,CA,92697,SEM,PUB,Active
+00131500,University of California-Los Angeles,2024,00131500,Los Angeles,CA,90095,SEM,PUB,Active
+00132500,University of San Francisco,2024,00132500,San Francisco,CA,94117,SEM,PRI,Active
+00132600,Santa Clara University,2024,00132600,Santa Clara,CA,95053,SEM,PRI,Active
+00132800,University of Southern California,2024,00132800,Los Angeles,CA,90089-0071,SEM,PRI,Active
+00132901,McGeorge School of Law,2024,00132900,Sacramento,CA,95817,SEM,PRI,Active
+00134201,Whittier Law School,2024,00134200,Costa Mesa,CA,92626,SEM,PRI,InActive
+00137000,University of Colorado,2024,00137000,Boulder,CO,80309,SEM,PUB,Active
+00137100,University of Denver,2024,00137100,Denver,CO,80208,SEM,PRI,Active
+00140201,Quinnipiac University,2024,00140200,North Haven,CT,06473,SEM,PRI,Active
+00141706,University of Connecticut,2024,00141700,Hartford,CT,06105,SEM,PUB,Active
+00142600,Yale University,2024,00142600,New Haven,CT,06511,SEM,PRI,Active
+00143401,American University,2024,00143400,Washington,DC,20016,SEM,PRI,Active
+00143711,Catholic University of America,2024,00143700,Washington,DC,20064,SEM,PRI,Active
+00144102,District of Columbia,2024,00144100,Washington,DC,20008,SEM,PUB,Active
+00144402,George Washington University,2024,00144400,Washington,DC,20052,SEM,PRI,Active
+00144503,Georgetown University,2024,00144500,Washington,DC,20001,SEM,PRI,Active
+00144802,Howard University,2024,00144800,Washington,DC,20008,SEM,PRI,Active
+00146601,Barry University,2024,00146600,Orlando,FL,32807,SEM,PRI,Active
+00146800,St. Thomas University (Florida),2024,00146800,Miami Gardens,FL,33054,SEM,PRI,Active
+00148001,Florida A&M University,2024,00148000,Orlando,FL,32801,SEM,PUB,Active
+00148900,Florida State University,2024,00148900,Tallahassee,FL,32306,SEM,PUB,Active
+00149500,Jacksonville University,2024,00149500,Jacksonville,FL,32211-3394,SEM,PRI,Active
+00150900,Nova Southeastern University,2024,00150900,Fort Lauderdale,FL,33314,SEM,PRI,Active
+00153101,Stetson University,2024,00153100,Gulfport,FL,33707,SEM,PRI,Active
+00153505,University of Florida,2024,00153500,Gainesville,FL,32611,SEM,PUB,Active
+00153601,University of Miami,2024,00153600,Coral Gables,FL,33146,SEM,PRI,Active
+00156400,Emory University,2024,00156400,Atlanta,GA,30322,SEM,PRI,Active
+00157400,Georgia State University,2024,00157400,Atlanta,GA,30302,SEM,PUB,Active
+00158015,Mercer University,2024,00158000,Macon,GA,31207,SEM,PRI,Active
+00159800,University of Georgia,2024,00159800,Athens,GA,30602,SEM,PUB,Active
+00161000,University of Hawaii,2024,00161000,Honolulu,HI,96822,SEM,PUB,Active
+00162600,University of Idaho,2024,00162600,Moscow,ID,83844,SEM,PUB,Active
+00167100,Depaul University,2024,00167100,Chicago,IL,60604,SEM,PRI,Active
+00169101,Chicago-Kent College of Law-IIT,2024,00169100,Chicago,IL,60661,SEM,PRI,Active
+00171000,Loyola University-Chicago,2024,00171000,Chicago,IL,60611,SEM,PRI,Active
+00173700,Northern Illinois University,2024,00173700,Dekalb,IL,60115,SEM,PUB,Active
+00173900,Northwestern University,2024,00173900,Chicago,IL,60611-2428,SEM,PRI,Active
+00175800,Southern Illinois University-Carbondale,2024,00175800,Carbondale,IL,62901,SEM,PUB,Active
+00177400,University of Chicago,2024,00177400,Chicago,IL,60637,QTR,PRI,Active
+00177500,University of Illinois,2024,00177500,Champaign,IL,61820,SEM,PUB,Active
+00177608,University of Illinois Chicago School of Law,2024,00177600,Chicago,IL,60604,SEM,PUB,Active
+00180500,Indiana Tech Law School,2024,00180500,Fort Wayne,IN,46803,SEM,PRI,InActive
+00180900,Indiana University - Bloomington,2024,00180900,Bloomington,IN,47405,SEM,PUB,Active
+00181300,Indiana University - Indianapolis,2024,00181300,Indianapolis,IN,46202,SEM,PUB,Active
+00184000,University of Notre Dame,2024,00184000,Notre Dame,IN,46556,SEM,PRI,Active
+00184200,Valparaiso University,2024,00184200,Valparaiso,IN,46383,SEM,PRI,InActive
+00186000,Drake University,2024,00186000,Des Moines,IA,50311,SEM,PRI,Active
+00189200,University of Iowa,2024,00189200,Iowa City,IA,52242-1113,SEM,PUB,Active
+00194800,University of Kansas,2024,00194800,Lawrence,KS,66045,SEM,PUB,Active
+00194900,Washburn University,2024,00194900,Topeka,KS,66621,SEM,PUB,Active
+00198903,University of Kentucky,2024,00198900,Lexington,KY,40506,SEM,PUB,Active
+00199900,University of Louisville,2024,00199900,Louisville,KY,40292,SEM,PUB,Active
+00201000,Louisiana State University,2024,00201000,Baton Rouge,LA,70803,SEM,PUB,Active
+00201600,Loyola University-New Orleans,2024,00201600,New Orleans,LA,70118,SEM,PRI,Active
+00202500,Southern University,2024,00202500,Baton Rouge,LA,70813,SEM,PUB,Active
+00202900,Tulane University,2024,00202900,New Orleans,LA,70118,SEM,PRI,Active
+00205400,University of Maine,2024,00205400,Portland,ME,04102,SEM,PUB,Active
+00210200,University of Baltimore,2024,00210200,Baltimore,MD,21201,SEM,PUB,Active
+00210400,University of Maryland,2024,00210400,Baltimore,MD,21201,SEM,PUB,Active
+00212801,Boston College,2024,00212800,Newton,MA,02459,SEM,PRI,Active
+00213007,Boston University,2024,00213000,Boston,MA,02215,SEM,PRI,Active
+00215510,Harvard University,2024,00215500,Cambridge,MA,02138,SEM,PRI,Active
+00219900,Northeastern University,2024,00219900,Boston,MA,02115,QTR,PRI,Active
+00221007,University of Massachusetts Dartmouth,2024,00221000,North Dartmouth,MA,02747,SEM,PUB,Active
+00221810,Suffolk University,2024,00221800,Boston,MA,02108,SEM,PRI,Active
+00222600,Western New England University,2024,00222600,Springfield,MA,01119,SEM,PRI,Active
+00225400,Michigan State University,2024,00225400,East Lansing,MI,48824,SEM,PUB,Active
+00232300,University of Detroit Mercy,2024,00232300,Detroit,MI,48226,SEM,PRI,Active
+00232503,University of Michigan,2024,00232500,Ann Arbor,MI,48109,SEM,PUB,Active
+00232902,Wayne State University,2024,00232900,Detroit,MI,48202,SEM,PUB,Active
+00234500,University of St. Thomas (Minnesota),2024,00234500,Minneapolis,MN,55403,SEM,PRI,Active
+00235401,Hamline University,2024,00235400,St. Paul,MN,55104,SEM,PRI,InActive
+00239100,William Mitchell College of Law,2024,00239100,St. Paul,MN,55105,SEM,PRI,InActive
+00239101,Mitchell Hamline School of Law,2024,00239100,St. Paul,MN,55105,SEM,PRI,Active
+00241501,Mississippi College,2024,00241500,Jackson,MS,39201,SEM,PRI,Active
+00244000,University of Mississippi,2024,00244000,University,MS,38677,SEM,PUB,Active
+00250609,Saint Louis University,2024,00250600,St. Louis,MO,63101,SEM,PRI,Active
+00251600,University of Missouri,2024,00251600,Columbia,MO,65211,SEM,PUB,Active
+00251800,University of Missouri-Kansas City,2024,00251800,Kansas City,MO,64110,SEM,PUB,Active
+00252000,Washington University,2024,00252000,St. Louis,MO,63130,SEM,PRI,Active
+00253600,University of Montana,2024,00253600,Missoula,MT,59812,SEM,PUB,Active
+00254200,Creighton University,2024,00254200,Omaha,NE,68178,SEM,PRI,Active
+00256500,University of Nebraska,2024,00256500,Lincoln,NE,68583,SEM,PUB,Active
+00256900,University of Nevada - Las Vegas,2024,00256900,Las Vegas,NV,89154,SEM,PUB,Active
+00258903,University of New Hampshire,2024,00258900,Concord,NH,03301,SEM,PUB,Active
+00262900,Rutgers University,2024,00262900,,NJ,,SEM,PUB,Active
+00262901,Rutgers University-Camden,2024,00262900,Camden,NJ,08102,SEM,PUB,InActive
+00262902,Rutgers University-Newark,2024,00262900,Newark,NJ,07102,SEM,PUB,InActive
+00263201,Seton Hall University,2024,00263200,Newark,NJ,07102,SEM,PRI,Active
+00266300,University of New Mexico,2024,00266300,Albuquerque,NM,87131,SEM,PUB,Active
+00267700,Brooklyn Law School,2024,00267700,Brooklyn,NY,11201,SEM,PRI,Active
+00270711,Columbia University,2024,00270700,New York,NY,10027,SEM,PRI,Active
+00271101,Cornell University,2024,00271100,Ithaca,NY,14853,SEM,PRI,Active
+00272203,Fordham University,2024,00272200,New York,NY,10023,SEM,PRI,Active
+00273200,Hofstra University,2024,00273200,Hempstead,NY,11549-1260,SEM,PRI,Active
+00278300,New York Law School,2024,00278300,New York,NY,10013,SEM,PRI,Active
+00278500,New York University,2024,00278500,New York,NY,10012,SEM,PRI,Active
+00279102,Pace University,2024,00279100,White Plains,NY,10603,SEM,PRI,Active
+00282300,"St. John's University",2024,00282300,Queens,NY,11439,SEM,PRI,Active
+00283700,University of Buffalo-SUNY,2024,00283700,Buffalo,NY,14260,SEM,PUB,Active
+00288200,Syracuse University,2024,00288200,Syracuse,NY,13244,SEM,PRI,Active
+00288600,Albany Law School of Union University,2024,00288600,Albany,NY,12208,SEM,PRI,Active
+00290301,Cardozo School of Law,2024,00290300,New York,NY,10003,SEM,PRI,Active
+00291300,Campbell University,2024,00291300,Raleigh,NC,27603,SEM,PRI,Active
+00292002,Duke University,2024,00292000,Durham,NC,27708,SEM,PRI,Active
+00292701,Elon University,2024,00292700,Greensboro,NC,27401,TRI,PRI,Active
+00295000,North Carolina Central University,2024,00295000,Durham,NC,27707,SEM,PUB,Active
+00297400,University of North Carolina,2024,00297400,Chapel Hill,NC,27599,SEM,PUB,Active
+00297805,Wake Forest University,2024,00297800,Winston-Salem,NC,27109,SEM,PRI,Active
+00300500,University of North Dakota,2024,00300500,Grand Forks,ND,58202,SEM,PUB,Active
+00302302,Capital University,2024,00302300,Columbus,OH,43215,SEM,PRI,Active
+00302400,Case Western Reserve University,2024,00302400,Cleveland,OH,44106,SEM,PRI,Active
+00303200,Cleveland State University,2024,00303200,Cleveland,OH,44115-2214,SEM,PUB,Active
+00308900,Ohio Northern University,2024,00308900,Ada,OH,45810,SEM,PRI,Active
+00309000,The Ohio State University,2024,00309000,Columbus,OH,43210,SEM,PUB,Active
+00312300,University of Akron,2024,00312300,Akron,OH,44325-2901,SEM,PUB,Active
+00312500,University of Cincinnati,2024,00312500,Cincinnati,OH,45221,SEM,PUB,Active
+00312700,University of Dayton,2024,00312700,Dayton,OH,45469-2772,SEM,PRI,Active
+00313100,University of Toledo,2024,00313100,Toledo,OH,43606,SEM,PUB,Active
+00316614,Oklahoma City University,2024,00316600,Oklahoma City,OK,73102,SEM,PRI,Active
+00318400,University of Oklahoma,2024,00318400,Norman,OK,73019,SEM,PUB,Active
+00318500,University of Tulsa,2024,00318500,Tulsa,OK,74104,SEM,PRI,Active
+00319100,Concordia Law School,2024,00319100,Boise,ID,83702,SEM,PRI,InActive
+00319700,Lewis and Clark College,2024,00319700,Portland,OR,97219,SEM,PRI,Active
+00322300,University of Oregon,2024,00322300,Eugene,OR,97403,SEM,PUB,Active
+00322700,Willamette University,2024,00322700,Salem,OR,97301,SEM,PRI,Active
+00325600,Drexel University,2024,00325600,Philadelphia,PA,19104,SEM,PRI,Active
+00325800,Duquesne University,2024,00325800,Pittsburgh,PA,15282,SEM,PRI,Active
+00331301,Widener University-Delaware,2024,00331300,Wilmington,DE,19803,SEM,PRI,Active
+00331302,Widener Commonwealth,2024,00331300,Harrisburg,PA,17110,SEM,PRI,Active
+00332900,Pennsylvania State University-Penn State Law,2024,00332900,University Park,PA,16802-1503,SEM,PUB,Active
+00332922,Pennsylvania State University,2024,00332922,University Park,PA,16802-1017,SEM,PUB,Active
+00332923,Pennsylvania State University-Dickinson School of Law,2024,00332900,Carlisle,PA,17013-2861,SEM,PUB,Active
+00337101,Temple University,2024,00337100,Philadelphia,PA,19122,SEM,PUB,Active
+00337800,University of Pennsylvania,2024,00337800,Philadelphia,PA,19104,SEM,PRI,Active
+00337900,University of Pittsburgh,2024,00337900,Pittsburgh,PA,15260,SEM,PUB,Active
+00338801,Villanova University,2024,00338800,Villanova,PA,19085,SEM,PRI,Active
+00341001,Roger Williams University,2024,00341000,Bristol,RI,02809,SEM,PRI,Active
+00344800,University of South Carolina,2024,00344800,Columbia,SC,29208,SEM,PUB,Active
+00347400,University of South Dakota,2024,00347400,Vermillion,SD,57069,SEM,PUB,Active
+00347900,Belmont University,2024,00347900,Nashville,TN,37212,SEM,PRI,Active
+00350200,Lincoln Memorial University,2024,00350200,Knoxville,TN,37902-2003,SEM,PRI,Active
+00350900,University of Memphis,2024,00350900,Memphis,TN,38103,SEM,PUB,Active
+00353000,University of Tennessee,2024,00353000,Knoxville,TN,37996-1810,SEM,PUB,Active
+00353500,Vanderbilt University,2024,00353500,Nashville,TN,37203-1181,SEM,PRI,Active
+00354500,Baylor University,2024,00354500,Waco,TX,76798,QTR,PRI,Active
+00361300,Southern Methodist University,2024,00361300,Dallas,TX,75275,SEM,PRI,Active
+00362300,"St. Mary's University",2024,00362300,San Antonio,TX,78228,SEM,PRI,Active
+00363221,Texas A&M University,2024,00363200,Fort Worth,TX,76102,SEM,PUB,Active
+00364200,Texas Southern University,2024,00364200,Houston,TX,77004,SEM,PUB,Active
+00364400,Texas Tech University,2024,00364400,Lubbock,TX,79409,SEM,PUB,Active
+00365200,University of Houston,2024,00365200,Houston,TX,77204,SEM,PUB,Active
+00365800,University of Texas at Austin,2024,00365800,Austin,TX,78705,SEM,PUB,Active
+00367000,Brigham Young University,2024,00367000,Provo,UT,84602,SEM,PRI,Active
+00367500,University of Utah,2024,00367500,Salt Lake City,UT,84112,SEM,PUB,Active
+00370500,William and Mary Law School,2024,00370500,Williamsburg,VA,23185,SEM,PUB,Active
+00374400,University of Richmond,2024,00374400,Richmond,VA,23173,SEM,PRI,Active
+00374500,University of Virginia,2024,00374500,Charlottesville,VA,22903,SEM,PUB,Active
+00374900,George Mason University,2024,00374900,Arlington,VA,22201,SEM,PUB,Active
+00376800,Washington and Lee University,2024,00376800,Lexington,VA,24450,SEM,PRI,Active
+00377800,Gonzaga University,2024,00377800,Spokane,WA,99220,SEM,PRI,Active
+00379001,Seattle University,2024,00379000,Seattle,WA,98122,SEM,PRI,Active
+00379800,University of Washington,2024,00379800,Seattle,WA,98195,QTR,PUB,Active
+00382700,West Virginia University,2024,00382700,Morgantown,WV,26506,SEM,PUB,Active
+00386300,Marquette University,2024,00386300,Milwaukee,WI,53201,SEM,PRI,Active
+00389500,University of Wisconsin,2024,00389500,Madison,WI,53706,SEM,PUB,Active
+00393200,University of Wyoming,2024,00393200,Laramie,WY,82071,SEM,PUB,Active
+00393600,Pontifical Catholic University of P.R.,2024,00393600,Ponce,PR,00717,SEM,PRI,Active
+00394200,University of Puerto Rico,2024,00710800,San Juan,PR,00931,SEM,PUB,Active
+00394700,"UC College of the Law, San Francisco",2024,00394700,San Francisco,CA,94102,SEM,PUB,Active
+00396900,University of Minnesota,2024,00396900,Minneapolis,MN,55455,SEM,PUB,Active
+00425090,Inter American University of Puerto Rico,2024,00393800,San Juan,PR,00936,SEM,PRI,Active
+00497700,South Texas College of Law,2024,00497700,Houston,TX,77002,SEM,PRI,Active
+00891600,New England Law | Boston,2024,00891600,Boston,MA,02116,SEM,PRI,Active
+00927500,Northern Kentucky University,2024,00927500,Highland Heights,KY,41099,SEM,PUB,Active
+00963500,Florida International University,2024,00963500,Miami,FL,33199,SEM,PUB,Active
+01014205,Touro University,2024,01014200,Central Islip,NY,11722,SEM,PRI,Active
+01014913,Pepperdine University,2024,01014900,Malibu,CA,90263,SEM,PRI,Active
+01039501,University of San Diego,2024,01039500,San Diego,CA,92110,SEM,PRI,Active
+01085400,Thomas Jefferson School of Law,2024,01085400,San Diego,CA,92101,SEM,PRI,InActive
+01164901,Loyola Marymount University-Los Angeles,2024,01164900,Los Angeles,CA,90015,SEM,PRI,Active
+01193400,Vermont Law School,2024,01193400,South Royalton,VT,05068,SEM,PRI,Active
+01262700,Thomas M. Cooley Law School,2024,01262700,Lansing,MI,48933,SEM,PRI,Active
+01310300,California Western School of Law,2024,01310300,San Diego,CA,92101,TRI,PRI,Active
+02053000,Liberty University,2024,02053000,Lynchburg,VA,24515,SEM,PRI,Active
+02179937,Western State College of Law,2024,02179900,Irvine,CA,92618,SEM,PRI,Active
+03091300,Regent University,2024,03091300,Virginia Beach,VA,23464,SEM,PRI,Active
+03173300,"Atlanta's John Marshall Law School",2024,03173300,Atlanta,GA,30309,SEM,PRI,Active
+03191300,City University of New York,2024,03191300,Long Island City,NY,11101,SEM,PUB,Active
+03374300,Florida Coastal School of Law,2024,03374300,Jacksonville,FL,32256,SEM,PRI,InActive
+03559300,Appalachian School of Law,2024,03559300,Grundy,VA,24614,SEM,PRI,Active
+03691400,Ave Maria School of Law,2024,03691400,Naples,FL,34119,SEM,PRI,Active
+04096300,Charleston School of Law,2024,04096300,Charleston,SC,29403,SEM,PRI,Active
+04131400,Arizona Summit Law School,2024,04131400,Phoenix,AZ,85004,SEM,PRI,InActive
+04143500,Charlotte School of Law,2024,04143500,Charlotte,NC,28244,SEM,PRI,InActive
+04242101,UNT Dallas College Of Law,2024,04242100,Dallas,TX,75201,SEM,PUB,Active

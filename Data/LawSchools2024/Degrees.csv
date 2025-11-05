@@ -1,0 +1,198 @@
+schoolid,schoolname,CalendarYear,TotalJDDeg,HispanicJDDeg,AmIndianJDDeg,AsianJDDeg,BlackJDDeg,NatHawJDDeg,TwoorMoreJDDeg,MinorityJDDeg,WhiteJDDeg,NonresalienJDDeg,UnknownJDDeg
+00100300,Faulkner University,2024,75,0,1,3,11,0,0,15,59,,1
+00103600,Samford University,2024,155,6,0,3,26,0,3,38,115,,2
+00105100,University of Alabama,2024,154,6,0,4,17,0,6,33,117,,4
+00108100,Arizona State University,2024,291,35,4,20,12,1,19,91,194,,6
+00108300,University of Arizona,2024,121,17,7,4,4,0,5,37,72,,12
+00110101,University of Arkansas-Little Rock,2024,138,3,1,1,6,0,8,19,119,,0
+00110800,University of Arkansas-Fayetteville,2024,124,11,0,3,7,0,8,29,92,,3
+00116453,Chapman University,2024,144,34,0,20,10,0,8,72,69,,3
+00129500,Southwestern Law School,2024,290,89,0,25,15,0,19,148,140,,2
+00130503,Stanford University,2024,199,31,0,19,13,0,21,84,102,,13
+00131273,University of California-Berkeley,2024,408,69,1,74,30,0,33,207,193,,8
+00131373,University of California-Davis,2024,243,42,0,60,4,0,25,131,111,,1
+00131400,University of California-Irvine,2024,164,24,0,44,12,1,12,93,67,,4
+00131500,University of California-Los Angeles,2024,372,53,1,61,14,0,30,159,198,,15
+00132500,University of San Francisco,2024,120,23,0,31,9,0,7,70,50,,0
+00132600,Santa Clara University,2024,202,52,0,49,6,0,15,122,75,,5
+00132800,University of Southern California,2024,222,32,0,45,18,0,12,107,102,,13
+00132901,McGeorge School of Law,2024,146,32,0,19,3,0,8,62,77,,7
+00137000,University of Colorado,2024,168,21,2,6,8,1,18,56,111,,1
+00137100,University of Denver,2024,241,23,3,4,4,0,11,45,181,,15
+00140201,Quinnipiac University,2024,116,8,0,6,7,0,3,24,87,,5
+00141706,University of Connecticut,2024,150,12,0,11,11,0,3,37,110,,3
+00142600,Yale University,2024,214,33,1,32,18,0,23,107,95,,12
+00143401,American University,2024,383,64,0,36,25,2,19,146,224,,13
+00143711,Catholic University of America,2024,126,9,0,6,9,2,11,37,82,,7
+00144102,District of Columbia,2024,63,7,0,7,29,0,2,45,17,,1
+00144402,George Washington University,2024,551,21,0,53,38,0,9,121,345,,85
+00144503,Georgetown University,2024,663,48,1,95,58,0,47,249,386,,28
+00144802,Howard University,2024,154,6,0,3,131,0,14,154,0,,0
+00146601,Barry University,2024,236,70,1,12,27,1,7,118,113,,5
+00146800,St. Thomas University (Florida),2024,249,134,2,7,26,0,2,171,78,,0
+00148001,Florida A&M University,2024,103,28,0,2,50,0,1,81,22,,0
+00148900,Florida State University,2024,184,48,0,7,13,0,11,79,104,,1
+00149500,Jacksonville University,2024,0,0,0,0,0,0,0,0,0,,0
+00150900,Nova Southeastern University,2024,195,65,0,9,14,0,6,94,91,,10
+00153101,Stetson University,2024,298,52,0,6,11,0,7,76,212,,10
+00153505,University of Florida,2024,264,42,1,13,19,0,10,85,170,,9
+00153601,University of Miami,2024,404,142,0,8,24,8,16,198,193,,13
+00156400,Emory University,2024,289,40,0,33,31,0,12,116,165,,8
+00157400,Georgia State University,2024,219,24,0,14,34,0,7,79,131,,9
+00158015,Mercer University,2024,105,7,0,7,5,0,3,22,79,,4
+00159800,University of Georgia,2024,189,16,0,10,15,0,0,41,146,,2
+00161000,University of Hawaii,2024,96,8,0,26,1,2,33,70,23,,3
+00162600,University of Idaho,2024,120,5,7,3,1,1,8,25,91,,4
+00167100,Depaul University,2024,178,27,0,12,10,0,4,53,119,,6
+00169101,Chicago-Kent College of Law-IIT,2024,234,29,0,26,14,0,13,82,145,,7
+00171000,Loyola University-Chicago,2024,351,53,0,37,27,0,17,134,217,,0
+00173700,Northern Illinois University,2024,95,10,1,11,3,0,11,36,54,,5
+00173900,Northwestern University,2024,270,29,0,43,29,2,19,122,133,,15
+00175800,Southern Illinois University-Carbondale,2024,84,0,0,4,5,0,1,10,74,,0
+00177400,University of Chicago,2024,199,32,1,21,14,0,14,82,112,,5
+00177500,University of Illinois,2024,203,22,0,45,7,1,4,79,107,,17
+00177608,University of Illinois Chicago School of Law,2024,295,39,0,20,24,0,6,89,199,,7
+00180900,Indiana University - Bloomington,2024,197,16,0,21,10,0,5,52,141,,4
+00181300,Indiana University - Indianapolis,2024,231,13,0,12,10,0,7,42,181,,8
+00184000,University of Notre Dame,2024,187,17,0,15,14,0,14,60,124,,3
+00186000,Drake University,2024,100,4,0,1,4,0,1,10,90,,0
+00189200,University of Iowa,2024,176,17,1,8,7,0,0,33,125,,18
+00194800,University of Kansas,2024,118,15,1,2,3,0,3,24,93,,1
+00194900,Washburn University,2024,96,10,2,2,2,0,2,18,74,,4
+00198903,University of Kentucky,2024,139,10,1,8,9,0,1,29,106,,4
+00199900,University of Louisville,2024,126,8,0,2,5,0,5,20,106,,0
+00201000,Louisiana State University,2024,208,15,1,1,17,0,2,36,169,,3
+00201600,Loyola University-New Orleans,2024,179,15,1,13,18,0,1,48,127,,4
+00202500,Southern University,2024,246,8,1,3,152,0,3,167,76,,3
+00202900,Tulane University,2024,218,30,1,4,12,0,3,50,162,,6
+00205400,University of Maine,2024,82,7,0,2,4,1,0,14,62,,6
+00210200,University of Baltimore,2024,219,0,0,13,23,0,0,36,123,,60
+00210400,University of Maryland,2024,244,23,2,18,31,0,2,76,168,,0
+00212801,Boston College,2024,341,10,1,29,36,0,29,105,230,,6
+00213007,Boston University,2024,297,53,0,33,15,0,16,117,164,,16
+00215510,Harvard University,2024,622,78,2,127,52,4,25,288,233,,101
+00219900,Northeastern University,2024,212,26,0,28,14,0,17,85,121,,6
+00221007,University of Massachusetts Dartmouth,2024,112,12,1,8,8,0,5,34,72,,6
+00221810,Suffolk University,2024,408,41,0,29,15,0,10,95,300,,13
+00222600,Western New England University,2024,110,11,0,4,5,0,0,20,81,,9
+00225400,Michigan State University,2024,221,10,2,6,6,0,6,30,179,,12
+00232300,University of Detroit Mercy,2024,199,9,0,20,15,0,7,51,133,,15
+00232503,University of Michigan,2024,323,37,2,34,17,0,23,113,202,,8
+00232902,Wayne State University,2024,138,8,0,4,13,0,9,34,103,,1
+00234500,University of St. Thomas (Minnesota),2024,159,0,0,8,10,0,11,29,118,,12
+00239101,Mitchell Hamline School of Law,2024,390,23,7,15,33,1,2,81,286,,23
+00241501,Mississippi College,2024,123,8,0,3,9,0,0,20,83,,20
+00244000,University of Mississippi,2024,175,14,2,1,23,0,4,44,131,,0
+00250609,Saint Louis University,2024,186,12,2,10,14,0,1,39,147,,0
+00251600,University of Missouri,2024,132,7,2,3,9,0,1,22,107,,3
+00251800,University of Missouri-Kansas City,2024,127,15,0,3,4,0,6,28,94,,5
+00252000,Washington University,2024,285,13,2,31,25,0,9,80,194,,11
+00253600,University of Montana,2024,79,6,4,0,1,0,1,12,67,,0
+00254200,Creighton University,2024,146,17,0,4,8,0,4,33,112,,1
+00256500,University of Nebraska,2024,153,8,1,6,7,0,0,22,129,,2
+00256900,University of Nevada - Las Vegas,2024,179,34,1,7,15,1,9,67,101,,11
+00258903,University of New Hampshire,2024,193,15,0,9,3,0,9,36,146,,11
+00262900,Rutgers University,2024,296,46,0,19,32,10,24,131,134,,31
+00263201,Seton Hall University,2024,314,34,0,35,6,1,10,86,220,,8
+00266300,University of New Mexico,2024,109,40,4,2,2,0,3,51,53,,5
+00267700,Brooklyn Law School,2024,400,35,1,51,12,0,15,114,275,,11
+00270711,Columbia University,2024,533,37,1,110,59,0,0,207,302,,24
+00271101,Cornell University,2024,197,9,0,45,11,0,15,80,99,,18
+00272203,Fordham University,2024,455,46,0,56,36,0,15,153,293,,9
+00273200,Hofstra University,2024,278,30,1,14,16,2,2,65,176,,37
+00278300,New York Law School,2024,345,42,0,25,7,0,7,81,243,,21
+00278500,New York University,2024,524,46,0,98,48,0,23,215,301,,8
+00279102,Pace University,2024,252,21,0,14,10,0,23,68,184,,0
+00282300,"St. John's University",2024,267,36,0,27,37,1,8,109,157,,1
+00283700,University of Buffalo-SUNY,2024,160,11,0,3,9,0,3,26,125,,9
+00288200,Syracuse University,2024,202,20,1,9,23,0,7,60,133,,9
+00288600,Albany Law School of Union University,2024,205,16,1,16,15,0,3,51,149,,5
+00290301,Cardozo School of Law,2024,308,27,0,29,13,0,7,76,198,,34
+00291300,Campbell University,2024,174,18,0,3,5,0,4,30,144,,0
+00292002,Duke University,2024,280,27,0,50,19,0,8,104,172,,4
+00292701,Elon University,2024,140,9,1,0,19,0,0,29,103,,8
+00295000,North Carolina Central University,2024,152,13,4,5,96,0,0,118,32,,2
+00297400,University of North Carolina,2024,210,22,0,14,14,0,15,65,145,,0
+00297805,Wake Forest University,2024,155,12,2,11,11,0,6,42,112,,1
+00300500,University of North Dakota,2024,81,3,2,5,4,0,7,21,60,,0
+00302302,Capital University,2024,145,5,1,2,10,0,6,24,117,,4
+00302400,Case Western Reserve University,2024,155,10,0,13,9,0,6,38,117,,0
+00303200,Cleveland State University,2024,111,1,0,2,11,0,4,18,85,,8
+00308900,Ohio Northern University,2024,62,1,0,1,3,0,0,5,55,,2
+00309000,The Ohio State University,2024,179,14,1,7,11,0,9,42,130,,7
+00312300,University of Akron,2024,131,3,1,4,5,0,4,17,108,,6
+00312500,University of Cincinnati,2024,134,6,0,8,3,2,2,21,112,,1
+00312700,University of Dayton,2024,108,8,0,4,11,0,3,26,78,,4
+00313100,University of Toledo,2024,125,2,0,0,7,0,10,19,100,,6
+00316614,Oklahoma City University,2024,133,23,4,8,6,1,19,61,72,,0
+00318400,University of Oklahoma,2024,193,19,5,6,9,0,18,57,134,,2
+00318500,University of Tulsa,2024,124,12,3,6,5,1,7,34,87,,3
+00319700,Lewis and Clark College,2024,194,13,2,15,4,2,3,39,145,,10
+00322300,University of Oregon,2024,164,15,1,9,3,0,14,42,121,,1
+00322700,Willamette University,2024,113,11,3,9,1,0,5,29,80,,4
+00325600,Drexel University,2024,140,14,0,15,17,0,7,53,83,,4
+00325800,Duquesne University,2024,157,7,0,4,6,0,4,21,132,,4
+00331301,Widener University-Delaware,2024,196,17,0,9,25,1,5,57,134,,5
+00331302,Widener Commonwealth,2024,97,12,0,9,9,0,0,30,65,,2
+00332900,Pennsylvania State University-Penn State Law,2024,140,17,0,6,10,0,10,43,95,,2
+00332922,Pennsylvania State University,2024,,,,,,,,,,,
+00332923,Pennsylvania State University-Dickinson School of Law,2024,89,4,0,10,11,0,8,33,53,,3
+00337101,Temple University,2024,225,29,0,22,24,0,7,82,143,,0
+00337800,University of Pennsylvania,2024,304,30,0,68,16,0,20,134,162,,8
+00337900,University of Pittsburgh,2024,146,15,0,8,7,0,6,36,109,,1
+00338801,Villanova University,2024,213,14,0,16,11,0,10,51,160,,2
+00341001,Roger Williams University,2024,173,21,0,6,9,0,5,41,125,,7
+00344800,University of South Carolina,2024,203,16,1,2,16,0,4,39,156,,8
+00347400,University of South Dakota,2024,74,3,2,0,1,0,5,11,60,,3
+00347900,Belmont University,2024,116,3,0,1,3,0,4,11,98,,7
+00350200,Lincoln Memorial University,2024,101,0,0,1,2,0,4,7,92,,2
+00350900,University of Memphis,2024,101,2,0,7,22,0,0,31,68,,2
+00353000,University of Tennessee,2024,127,7,1,0,11,0,4,23,101,,3
+00353500,Vanderbilt University,2024,187,24,0,14,19,0,3,60,118,,9
+00354500,Baylor University,2024,198,37,0,9,7,0,11,64,134,,0
+00361300,Southern Methodist University,2024,247,25,0,19,17,0,14,75,159,,13
+00362300,"St. Mary's University",2024,232,123,3,3,6,0,0,135,97,,0
+00363221,Texas A&M University,2024,178,28,2,13,7,0,9,59,110,,9
+00364200,Texas Southern University,2024,183,61,3,9,95,1,0,169,14,,0
+00364400,Texas Tech University,2024,145,33,2,4,8,0,5,52,89,,4
+00365200,University of Houston,2024,260,50,2,39,9,0,0,100,159,,1
+00365800,University of Texas at Austin,2024,412,48,1,54,14,0,10,127,267,,18
+00367000,Brigham Young University,2024,142,5,0,4,6,3,12,30,111,,1
+00367500,University of Utah,2024,95,10,0,4,0,0,1,15,77,,3
+00370500,William and Mary Law School,2024,170,6,0,21,10,0,7,44,122,,4
+00374400,University of Richmond,2024,151,16,0,9,8,0,11,44,105,,2
+00374500,University of Virginia,2024,299,17,0,45,22,0,14,98,197,,4
+00374900,George Mason University,2024,235,14,0,21,7,0,12,54,176,,5
+00376800,Washington and Lee University,2024,141,11,1,8,7,0,3,30,104,,7
+00377800,Gonzaga University,2024,168,23,0,7,2,0,14,46,119,,3
+00379001,Seattle University,2024,206,30,1,15,9,0,13,68,130,,8
+00379800,University of Washington,2024,171,19,0,33,9,0,12,73,89,,9
+00382700,West Virginia University,2024,107,1,0,1,1,0,5,8,98,,1
+00386300,Marquette University,2024,202,22,0,4,8,0,6,40,162,,0
+00389500,University of Wisconsin,2024,263,26,1,17,12,0,18,74,185,,4
+00393200,University of Wyoming,2024,86,2,1,1,0,0,8,12,72,,2
+00393600,Pontifical Catholic University of P.R.,2024,113,113,0,0,0,0,0,113,0,,0
+00394200,University of Puerto Rico,2024,130,69,0,0,2,0,0,71,1,,58
+00394700,"UC College of the Law, San Francisco",2024,366,66,0,94,15,3,0,178,171,,17
+00396900,University of Minnesota,2024,230,24,0,23,7,0,12,66,160,,4
+00425090,Inter American University of Puerto Rico,2024,135,134,0,0,0,0,0,134,0,,1
+00497700,South Texas College of Law,2024,286,84,0,20,18,0,10,132,149,,5
+00891600,New England Law | Boston,2024,306,41,0,7,18,0,5,71,225,,10
+00927500,Northern Kentucky University,2024,122,6,0,1,7,0,0,14,103,,5
+00963500,Florida International University,2024,172,81,0,2,18,0,2,103,63,,6
+01014205,Touro University,2024,144,24,0,10,10,0,6,50,88,,6
+01014913,Pepperdine University,2024,197,30,0,23,10,0,5,68,123,,6
+01039501,University of San Diego,2024,249,33,2,35,6,0,8,84,125,,40
+01164901,Loyola Marymount University-Los Angeles,2024,336,77,0,44,13,0,20,154,181,,1
+01193400,Vermont Law School,2024,146,21,0,5,8,0,5,39,95,,12
+01262700,Thomas M. Cooley Law School,2024,120,6,0,5,14,1,13,39,77,,4
+01310300,California Western School of Law,2024,218,61,1,12,7,1,16,98,112,,8
+02053000,Liberty University,2024,112,7,0,4,4,0,6,21,84,,7
+02179937,Western State College of Law,2024,76,32,0,8,1,0,10,51,25,,0
+03091300,Regent University,2024,111,9,1,6,3,2,4,25,86,,0
+03173300,"Atlanta's John Marshall Law School",2024,85,13,2,6,34,0,0,55,27,,3
+03191300,City University of New York,2024,213,52,0,25,24,0,18,119,87,,7
+03559300,Appalachian School of Law,2024,39,1,0,0,5,0,0,6,31,,2
+03691400,Ave Maria School of Law,2024,85,14,0,1,4,0,1,20,61,,4
+04096300,Charleston School of Law,2024,232,12,0,4,9,0,1,26,199,,7
+04242101,UNT Dallas College Of Law,2024,90,28,0,4,12,0,0,44,45,,1
