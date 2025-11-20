@@ -131,7 +131,7 @@ pdf("Recid-ROC-25.pdf",6,6)
 par(mar=c(4,4,2,2))
 plot(Recid.ROC,auc.polygon=TRUE,print.auc=TRUE,
      ci=FALSE,legacy.axes=TRUE,
-     xlab="True Positive Rate",ylab="False Positive Rate")
+     xlab="False Positive Rate",ylab="True Positive Rate")
 dev.off()
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -184,7 +184,7 @@ pdf("Test-ROC-25.pdf",6,6)
 par(mar=c(4,4,2,2))
 plot(Test.ROC,auc.polygon=TRUE,print.auc=TRUE,
      ci=FALSE,legacy.axes=TRUE,
-     xlab="True Positive Rate",ylab="False Positive Rate")
+     xlab="False Positive Rate",ylab="True Positive Rate")
 dev.off()
 
 # That's fine. For K-fold cross-validation, we
@@ -355,19 +355,20 @@ P3<-runif(M,min=0.001,max=0.999) # Coin flip
 
 # Now plots:
 
-pdf("ROC-Examples.pdf",11,4)
+pdf("ROC-Examples-25.pdf",11,4)
 par(mfrow=c(1,3))
 par(mar=c(4,4,2,2))
 plot(roc(Y1,P1),auc.polygon=TRUE,print.auc=TRUE,
      ci=FALSE,legacy.axes=TRUE,print.auc.cex=1.5,
-     xlab="True Positive Rate",ylab="False Positive Rate",
+     xlab="False Positive Rate",ylab="True Positive Rate",
      main="Perfect Prediction")
+points(1,1,pch=19,cex=2)
 plot(roc(Y2,P2),auc.polygon=TRUE,print.auc=TRUE,
      ci=FALSE,legacy.axes=TRUE,print.auc.cex=1.5,
-     xlab="True Positive Rate",ylab="False Positive Rate",
+     xlab="False Positive Rate",ylab="True Positive Rate",
      main="Good Prediction")
 plot(roc(Y3,P3),auc.polygon=TRUE,print.auc=TRUE,
      ci=FALSE,legacy.axes=TRUE,print.auc.cex=1.5,
-     xlab="True Positive Rate",ylab="False Positive Rate",
+     xlab="False Positive Rate",ylab="True Positive Rate",
      main="Zero Prediction")
 dev.off()
